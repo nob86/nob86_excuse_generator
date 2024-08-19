@@ -18,7 +18,7 @@ window.onload = function() {
     "while I was praying"
   ];
 
-  function generator_excuse() {
+  function generatorExcuse() {
     const generateRandomArray = array => {
       return Math.floor(Math.random() * array.length);
     };
@@ -27,16 +27,9 @@ window.onload = function() {
     let randomWhat = generateRandomArray(what);
     let randomWhen = generateRandomArray(when);
 
-    let excuse =
-      who[randomWho] +
-      " " +
-      action[randomAction] +
-      " " +
-      what[randomWhat] +
-      " " +
-      when[randomWhen];
+    let excuse = `${who[randomWho]} ${action[randomAction]} ${what[randomWhat]} ${when[randomWhen]}`;
 
     return excuse;
   }
-  document.getElementById("excuse").innerHTML = generator_excuse();
+  document.getElementById("excuse").innerHTML = generatorExcuse();
 };
